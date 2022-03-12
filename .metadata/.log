@@ -8774,3 +8774,48 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 2 2 2022-03-12 14:40:25.804
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:21.838
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:21.848
+!MESSAGE classpath=99 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:21.855
+!MESSAGE buffering callback sts4.classpath.tWMMWDiL lucatilog-api false 99
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:21.855
+!MESSAGE executing callback sts4.classpath.tWMMWDiL 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:22.568
+!MESSAGE executing callback sts4.classpath.tWMMWDiL SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:22.571
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:22.580
+!MESSAGE classpath=99 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:22.595
+!MESSAGE buffering callback sts4.classpath.tWMMWDiL lucatilog-api false 99
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:22.596
+!MESSAGE executing callback sts4.classpath.tWMMWDiL 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:22.685
+!MESSAGE executing callback sts4.classpath.tWMMWDiL SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:27.147
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:27.161
+!MESSAGE classpath=99 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:27.166
+!MESSAGE buffering callback sts4.classpath.tWMMWDiL lucatilog-api false 99
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:27.166
+!MESSAGE executing callback sts4.classpath.tWMMWDiL 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-12 16:43:27.185
+!MESSAGE executing callback sts4.classpath.tWMMWDiL SUCCESS [done]
