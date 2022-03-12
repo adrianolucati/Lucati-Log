@@ -1,0 +1,5 @@
+package com.lucatiworks.lucatilog.api.exceptionhandler;
+
+public class ApiExceptionHandler {
+
+}
