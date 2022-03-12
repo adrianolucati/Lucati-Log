@@ -1,0 +1,5 @@
+package com.lucatiworks.lucatilog.domain.repository;
+
+public interface ClienteRepository {
+
+}
