@@ -1,0 +1,6 @@
+package com.lucatiworks.lucatilog.domain.model;
+
+public class StatusEntrega {
+	
+	PENDENTE, FINALIZADA, CANCELADA
+}

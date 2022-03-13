@@ -1,0 +1,9 @@
+package com.lucatiworks.lucatilog.domain.model;
+
+public class StatusEntrega {
+
+	public static final StatusEntrega PENDENTE = null;
+	public static final StatusEntrega FINALIZADA = null;
+	public static final StatusEntrega CANCELADA = null;
+	
+}
