@@ -1,7 +1,6 @@
 package com.lucatiworks.lucatilog.api.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -19,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lucatiworks.lucatilog.domain.model.Cliente;
 import com.lucatiworks.lucatilog.domain.repository.ClienteRepository;
+import com.lucatiworks.lucatilog.domain.service.CatalogoClienteService;
 
 import lombok.AllArgsConstructor;
 
@@ -28,6 +28,7 @@ import lombok.AllArgsConstructor;
 public class ClienteController {
 
 	private ClienteRepository clienteRepository;
+	private CatalogoClienteService catalogoClienteService;
 	
 	//como fiz o RequestMapping acima, poderia deixar aqui só @GetMapping
 	@GetMapping
@@ -60,17 +61,20 @@ public class ClienteController {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public Cliente adicionar(@Valid @RequestBody Cliente cliente) {
-		return clienteRepository.save(cliente);
+	//	return clienteRepository.save(cliente); substituido pela linha abaixo após criar classe para gerenciar regras de negócio
+		return catalogoClienteService.salvar(cliente);
 	}
 	
 	@PutMapping("/{clienteId}")
 	public ResponseEntity<Cliente> atualizar(@Valid @PathVariable Long clienteId, @RequestBody Cliente cliente) {
 		if (!clienteRepository.existsById(clienteId)) {
 			return ResponseEntity.notFound().build();
+			
 		}
 		
 		cliente.setId(clienteId);
-		cliente = clienteRepository.save(cliente);
+		//cliente = clienteRepository.save(cliente); substituido pela linha abaixo após criar classe para gerenciar regras de negócio
+		cliente = catalogoClienteService.salvar(cliente);
 		
 		return ResponseEntity.ok(cliente);
 	}
@@ -81,7 +85,8 @@ public class ClienteController {
 			return ResponseEntity.notFound().build();
 		}
 		
-		clienteRepository.deleteById(clienteId);
+		//clienteRepository.deleteById(clienteId); substituido pela linha abaixo após criar classe para gerenciar regras de negócio
+		catalogoClienteService.excluir(clienteId);
 		
 		return ResponseEntity.noContent().build();
 	}
