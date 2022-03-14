@@ -11,9 +11,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import javax.validation.groups.ConvertGroup;
+import javax.validation.groups.Default;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
+import com.lucatiworks.lucatilog.domain.ValidationGroups;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -30,13 +35,19 @@ public class Entrega {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Valid
+	@ConvertGroup(from = Default.class, to = ValidationGroups.ClienteId.class)
+	@NotNull
 	@ManyToOne
 	//@JoinColumn(name = "cliente_id") // para refereiar uma coluna com nome diferente desse padrão
 	private Cliente cliente;
 	
+	@Valid
+	@NotNull
 	@Embedded // utilizado para extrair os dados de outra classe mesmo estando tudo na mesma tabela | destinatario está na mesma tabela que Entrega
 	private Destinatario destinatario;
 	
+	@NotNull
 	private BigDecimal taxa;
 
 	@JsonProperty(access = Access.READ_ONLY)
