@@ -1,15 +1,13 @@
 package com.lucatiworks.lucatilog.domain.service;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.lucatiworks.lucatilog.domain.exception.NegocioException;
 import com.lucatiworks.lucatilog.domain.model.Cliente;
 import com.lucatiworks.lucatilog.domain.model.Entrega;
 import com.lucatiworks.lucatilog.domain.model.StatusEntrega;
-import com.lucatiworks.lucatilog.domain.repository.ClienteRepository;
 import com.lucatiworks.lucatilog.domain.repository.EntregaRepository;
 
 import lombok.AllArgsConstructor;
@@ -28,7 +26,7 @@ public class SolicitacaoEntregaService {
 		
 		entrega.setCliente(cliente);
 		entrega.setStatus(StatusEntrega.PENDENTE);
-		entrega.setDataPedido(LocalDateTime.now());
+		entrega.setDataPedido(OffsetDateTime.now());
 		
 		return entregaRepository.save(entrega);
 	}
