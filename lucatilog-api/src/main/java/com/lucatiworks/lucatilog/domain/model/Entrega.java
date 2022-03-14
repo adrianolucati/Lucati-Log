@@ -1,7 +1,6 @@
 package com.lucatiworks.lucatilog.domain.model;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 
 import javax.persistence.Embedded;
@@ -60,5 +59,5 @@ public class Entrega {
 	
 	@JsonProperty(access = Access.READ_ONLY)
 	private OffsetDateTime dataFinalizacao;
-
+	
 }
