@@ -1,0 +1,5 @@
+package com.lucatiworks.lucatilog.api.model.input;
+
+public class ClienteIdInput {
+
+}
